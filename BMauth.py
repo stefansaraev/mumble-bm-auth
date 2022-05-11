@@ -220,7 +220,7 @@ def do_main_program():
                     warning("No password supplied for user " + name)
                     return (AUTH_REFUSED, None, None)
 
-                headers = { "X-Id": id, "X-Callsign" : callsign.upper(), "X-Identifier-Type" : "1", "X-Password": pw }
+                headers = { "X-Id": id, "X-Callsign" : callsign.upper(), "X-Password": pw }
                 response = requests.get(cfg.bm.auth_url, headers=headers, auth=(cfg.bm.auth_user, cfg.bm.auth_pass))
                 if response.status_code == 200:
                     debug("Login accepted for " + name)
