@@ -1,0 +1,16 @@
+[Unit]
+Description=BMauth
+After=network.target multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/mumble-bm-auth
+ExecStart=/opt/mumble-bm-auth/BMauth.py
+TimeoutStopSec=1
+Restart=always
+RestartSec=2
+StartLimitInterval=0
+
+[Install]
+WantedBy=multi-user.target
+
