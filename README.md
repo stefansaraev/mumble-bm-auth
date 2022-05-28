@@ -1,3 +1,8 @@
+clone
+```
+cd /opt
+git clone https://github.com/stefansaraev/mumble-bm-auth.git
+```
 
 install dependencies
 ```
